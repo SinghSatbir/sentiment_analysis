@@ -24,7 +24,7 @@ def form_view(request):
         form_object = Form(request.POST)
         if form_object.is_valid():
             form_object.save(commit=True)
-            return index(request)
+            return result_view(request)
     context = {
         'form_full': form_object
     }
@@ -61,7 +61,6 @@ def result_view(request):
         'positive': positive,
         'negative': negative,
         'neutral': neutral,
-        'tweets':tweets,
-        'number': 5,
+        'tweets':tweets[:5],
     }
     return HttpResponse(template.render(context, request))

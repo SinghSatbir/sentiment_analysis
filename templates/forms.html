@@ -1,9 +1,8 @@
-<!doctype html>
-<html>
-<head>
+{% extends 'base.html' %}
+{% block head %}
 
-</head>
-<body>
+{% endblock %}
+{% block body %}
 <h1>
     WELCOME TO FORM VIEW PAGE
     </h1>
@@ -19,5 +18,4 @@ Enter Here !!
     {% csrf_token %}
     <input name="Search" type="submit">
 </form>
-</body>
-</html>
+{% endblock %}
