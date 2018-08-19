@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>
+    WELCOME TO FORM VIEW PAGE
+    </h1>
+<br>
+<a href="{% url 'index' %}">
+    <em>
+        index
+    </em>
+</a><br>
+Enter Here !!
+<form method="post">
+    {{ form_full.as_p }}
+    {% csrf_token %}
+    <input name="Search" type="submit">
+</form>
+</body>
+</html>

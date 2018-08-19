@@ -5,6 +5,7 @@ import tweepy
 # Create your views here.
 from django.template import loader
 from twitter_analysis.forms import Form
+from twitter_analysis.models import Word
 
 
 def index(request):
@@ -15,7 +16,7 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def form_view(request):
-    template = loader.get_template('')
+    template = loader.get_template('forms.html')
     form_object = Form()
     if request.method == 'POST':
         form_object = Form(request.POST)
