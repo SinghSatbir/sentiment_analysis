@@ -1,9 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import tweepy
+import textblob
 
 # Create your views here.
 from django.template import loader
+from textblob import TextBlob
+
 from twitter_analysis.forms import Form
 from twitter_analysis.models import Word
 
@@ -36,10 +39,29 @@ def result_view(request):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
+    tweets=[]
     positive=0
     negative=0
     neutral=0
-    context={
-        'keyword': Word.objects.last()
+    searchword=Word.objects.last()
+    public_tweets = api.search(searchword, show_user=[True], count=100)
+    for tweet in public_tweets:
+        analysis = TextBlob(tweet.text)
+        polarity_value = analysis.sentiment.polarity
+        if polarity_value > 0:
+            positive += 1
+        elif polarity_value < 0:
+            negative += 1
+        else:
+            neutral += 1
+        tweets.append(tweet.user.name + ':' + tweet.text)
+
+    context = {
+        'keyword': searchword,
+        'positive': positive,
+        'negative': negative,
+        'neutral': neutral,
+        'tweets':tweets,
+        'number': 5,
     }
     return HttpResponse(template.render(context, request))

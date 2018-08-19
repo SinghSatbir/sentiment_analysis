@@ -5,8 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<h5>
+<h4>
     {{ keyword }}
+</h4>
+
+<br>
+<hr>
+<h5>No. of positive tweets : {{ positive }}</h5>
+<br>
+<h5>No. of negative tweets : {{ negative }}</h5>
+<br>
+<h5>No. of neutral tweets : {{ neutral }}</h5>
+<br>
+<h5>        {% for a_tweet in tweets %}
+                {%  if number > 0%}
+                    {{ a_tweet }}
+                    <hr>
+                {% endif %}
+            {% endfor %}
 </h5>
+
+
 </body>
 </html>
