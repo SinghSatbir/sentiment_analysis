@@ -21,6 +21,6 @@ from twitter_analysis import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^form/',views.form_view,name='form'),
-
+    url(r'^form/', views.form_view, name='form'),
+    url(r'^result/', views.result_view, name='result')
 ]
