@@ -20,6 +20,7 @@ from django.contrib import admin
 from twitter_analysis import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index' ),
+    url(r'^$', views.index, name='index'),
+    url(r'^form/',views.form_view,name='form'),
 
 ]
