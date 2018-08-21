@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 {% block head %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
 
 {% endblock %}
 {% block body %}
-<h1>
-    WELCOME TO FORM VIEW PAGE
+    <div class="bodyblock">
+<h1 style="color: white;font-family: 'Anton', sans-serif;margin-top: 50px;align:center;text-align: center;">
+    ENTER THE KEYWORD/HASHTAG TO BE SEARCHED
     </h1>
 <br>
 <a href="{% url 'index' %}">
-    <em>
-        index
-    </em>
 </a><br>
-Enter Here !!
+<div id="form">
 <form method="post">
-    {{ form_full.as_p }}
+    {{ form_full }}
     {% csrf_token %}
-    <input name="Search" type="submit">
+    <input name="submits" type="submit" value="search" style="color: white;background-color: dodgerblue">
 </form>
+</div>
+    </div>
 {% endblock %}

@@ -1,26 +1,35 @@
 {% extends 'base.html' %}
-{% block head%}
+{% load staticfiles %}
 
+{% block head%}
+            <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta charset="UTF-8">
     <title>Title</title>
 {% endblock %}
 {% block body %}
-<h4>
+        <div class="bodyblock">
+
+<h4 style="align:center;text-align: center;color: white">
     {{ keyword }}
 </h4>
 
 <br>
-<hr>
-<h5>No. of positive tweets : {{ positive }}</h5>
 <br>
-<h5>No. of negative tweets : {{ negative }}</h5>
+<h5>Percentage of positive tweets : {{ positive }}</h5>
 <br>
-<h5>No. of neutral tweets : {{ neutral }}</h5>
+<h5>Percentage of negative tweets : {{ negative }}</h5>
 <br>
+<h5>Percentage of neutral tweets : {{ neutral }}</h5>
+<br>
+ <h3 style="color: white;font-family: 'Anton', sans-serif;margin:10px">
+     Recent 5 Tweets are:
+ </h3>
+        <br>
 <h5>        {% for a_tweet in tweets %}
                     {{ a_tweet }}
-                    <hr>
+            <br>
+            <br>
             {% endfor %}
 </h5>
-
+        </div>
 {% endblock %}

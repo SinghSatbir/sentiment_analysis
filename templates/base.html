@@ -10,25 +10,27 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 
         <link rel="stylesheet" href="{% static 'style.css' %}">
+    <div id="blockhead">
     {% block head %}
 
     {% endblock %}
-
+    </div>
 </head>
 
-<body style="background-image:url(https://doc-0s-a0-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/rc9bsqsskugfajqkl2ls30pjjdfvpd9i/1534795200000/18253618663358480250/*/1n7XSPtjJD6F-jbZ0HvVD3XJL8Nz1E7VH); background-size:cover;background-repeat: no-repeat;">
-    <nav class="navbar navbar-light navbar-expand-md" style="background-color:transparent; border: #ffffff; border-style: solid ;">
+<body style="background-color: cornflowerblue;background-size:cover;background-repeat: no-repeat;background-clip: border-box">
+
+<nav class="navbar navbar-light navbar-expand-md" style="background-color:transparent; border: #ffffff; border-style: solid ;">
         <div class="container-fluid"><a class="navbar-brand" href="{%   url 'index' %}" style="color: white;font-family: 'Anton', sans-serif;
- border-right: solid;border-bottom-right-radius: 100% ">Home</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+ ">Home</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#" style="color: white;font-family: 'Anton', sans-serif;
-border-right: solid;border-bottom-right-radius: 100%">First Item</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'form' %}" style="color: white;font-family: 'Anton', sans-serif;
+">Form</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'result' %}" style="color: white;font-family: 'Anton', sans-serif;
+">Result</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="color: white;font-family: 'Anton', sans-serif;
-border-right: solid;border-bottom-right-radius: 100%">Second Item</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="color: white;font-family: 'Anton', sans-serif;
-border-right: solid;border-bottom-right-radius: 100%">Third Item</a></li>
+">About Me</a></li>
                 </ul>
             </div>
         </div>
@@ -40,8 +42,10 @@ border-right: solid;border-bottom-right-radius: 100%">Third Item</a></li>
     <script>
         particlesJS.load('particles-js','{% static 'particles.json' %}');
     </script>
+    <div id="blockbody">
     {% block body %}
     {% endblock %}
+    </div>
     <div id="particles-js"></div>
 
 </body>

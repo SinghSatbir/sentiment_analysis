@@ -6,3 +6,4 @@ class Form(forms.ModelForm):
     class Meta:
         model = Word
         fields = '__all__'
+        labels = {'keyword_entered': ''}
