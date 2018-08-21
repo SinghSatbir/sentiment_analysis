@@ -1,0 +1,26 @@
+{
+  "particles":{
+    "number":{
+      "value":100
+    },
+    "color":{
+      "value": "#fff"
+    },
+    "size":{
+      "value":20,
+      "random":true
+    },
+    "shape": {
+      "type": "image",
+      "stroke":{
+        "width": 4,
+        "color":"black"
+      },
+      "image": {
+        "src":" http://sonsandco.co.uk/wp-content/uploads/2018/06/Twitter-bird-white-icon-block.png "
+      }
+    }
+
+
+  }
+}

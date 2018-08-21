@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block head %}
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
 {% endblock %}
 {% block body %}
-
 
 <br>
 <a href="{% url 'form' %}">
