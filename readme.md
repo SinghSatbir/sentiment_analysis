@@ -9,7 +9,7 @@ Framework used is Django ( version 1.9 ).
 
 REQUIREMENTS  : -
 
-installation of tweepy and textblob specially required
+installation of tweepy and textblob required
 
 Commands :
 
