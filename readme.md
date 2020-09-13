@@ -1,19 +1,13 @@
-This project is based on Sentiment Analysis using textblob library in python.
-To get twitter api in python tweepy library is used.
-Here the web-app(twitter_analysis) performs an analysis on recent tweets on the keyword enetered by user and displays the polarity and sentiment level of that keyword entered.
-It displays the percentage of tweets which are positive, negative and neutral.
+Classified a given set of tweets into 6 categories- toxic, severe-toxic, obscene, threat, insult, identity-hate.
+■ Performed sentiment analysis on recent tweets and displayed their sentiment level.
+■ Used different machine learning(Naive Bayes, Logistic Regression etc) and deep learning models(Bi-LSTM) to classify the tweets, retrieved tweets using
+twitterAPI and implemented a user interface using Python/Django.
 It also displays recent 5 tweets on topic enetered.
 Framework used is Django ( version 1.9 ).
 
 
 
-REQUIREMENTS  : -
+REQUIREMENTS INSTALLATION : -
 
-installation of tweepy and textblob required
-
-Commands :
-
-pip install tweepy
-
-pip install textblob
+pip install -r requirements.txt
 
