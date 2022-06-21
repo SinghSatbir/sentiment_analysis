@@ -13,7 +13,7 @@ Faker==0.8.15
 idna==2.7
 Markdown==2.6.11
 nltk==3.3
-numpy==1.14.5
+numpy==1.22.0
 oauthlib==2.1.0
 patterns==0.3
 pickleshare==0.7.4
